@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Công ty Liên Hiệp Phát Logistics</title>
+    <title>Dịch Vụ - Liên Hiệp Phát Logistics</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="/favicon.png" type="image/png">
     <style>
         html {
-            font-size: 90%; /* Giảm kích thước font mặc định xuống 90% */
+            font-size: 90%;
+            /* Giảm kích thước font mặc định xuống 90% */
         }
     </style>
     <script>
@@ -39,113 +41,308 @@
 <body class="min-h-screen flex flex-col bg-orange-50">
     <!-- Header -->
     <header class="bg-orange-500 shadow-md sticky top-0 z-10">
-        <div class="container mx-auto px-4 py-2 flex justify-between items-center">
-            <div class="flex items-center space-x-6">
-                <div class="flex items-center gap-2">
-                    <img src="logo.png" alt="Company Logo" class="h-8 w-auto">
-                    <span class="font-bold text-xl text-white"> LHP Logistics</span>
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <div class="flex items-center gap-1">
+                    <img src="logo.png" alt="Company Logo" class="h-7 w-auto">
+                    <span class="font-bold text-xl text-white">LHP Logistics</span>
                 </div>
                 <nav class="hidden md:flex space-x-1">
-                    <button
-                        class="home-btn px-4 py-2 rounded-lg bg-orange-600 hover:bg-orange-700 transition-colors text-white font-medium">Trang
-                        chủ</button>
-                    <!-- <button class="px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors text-white font-medium hover:bg-orange-700 ">Dịch vụ</button> -->
-                    <a href="about.html"
-                        class="px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors text-white font-medium hover:bg-orange-700 ">Dịch
-                        Vụ</a>
+                    <a href="index.html"
+                        class="px-3 py-1.5 rounded-lg bg-orange-700 hover:bg-orange-700 transition-colors text-white font-medium">Trang
+                        chủ</a>
+                    <a href="search-order.html"
+                        class="px-3 py-1.5 rounded-lg hover:bg-orange-600 transition-colors text-white font-medium">Tra
+                        Cứu Vận Đơn</a>
                     <a href="price.html"
-                        class="px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors text-white font-medium hover:bg-orange-700 ">Giá
+                        class="px-3 py-1.5 rounded-lg hover:bg-orange-600 transition-colors text-white font-medium">Giá
                         cước</a>
-                    <!-- <button class="px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors text-white font-medium">Liên hệ</button> -->
                 </nav>
             </div>
-            <!-- <div class="flex items-center space-x-4">
-                <a href="login.html" class="login-btn flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white hover:bg-orange-50 text-orange-600 font-medium shadow-sm hover:shadow transition-all">
-                    <i class="fas fa-user-circle"></i>
-                    <span>Đăng nhập</span>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button"
+                class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg bg-orange-600 text-white">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu (hidden by default) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-orange-600 pb-2">
+            <nav class="container mx-auto px-4 flex flex-col space-y-2">
+                <a href="index.html"
+                    class="px-4 py-2 rounded-lg bg-orange-700 hover:bg-orange-800 transition-colors text-white font-medium">
+                    Trang Chủ
                 </a>
-                <button class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg bg-orange-600 text-white">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div> -->
+                <a href="search-order.html"
+                    class="px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors text-white font-medium">
+                    Tra Cứu Vận Đơn
+                </a>
+                <a href="price.html"
+                    class="px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors text-white font-medium">
+                    Giá Cước
+                </a>
+            </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="relative text-white mt-[40px]">
+
+    <!-- Page Title Section -->
+    <section class="relative text-white mt-[20px]">
         <!-- Background image with overlay -->
         <div class="fixed inset-0 bg-cover bg-center bg-no-repeat"
             style="background-image: url('logistics-background.jpg'); z-index: -2;"></div>
         <div class="fixed inset-0 bg-black/60" style="z-index: -1;"></div>
         <div class="fixed inset-0 bg-gradient-to-r" style="z-index: -1;"></div>
 
-        <div class="container mx-auto px-4 py-20 md:py-8 relative z-1 flex flex-col items-center">
-            <div class="flex items-center gap-3 mb-6">
-                <img src="logo.png" alt="Company Logo" class="h-12 w-auto">
+        <div class="container mx-auto px-4 py-8 md:py-20 relative z-1 flex flex-col items-center">
+            <div class="flex items-center gap-2 mb-2">
+                <img src="logo.png" alt="Company Logo" class="h-10 w-auto">
                 <h1 class="text-2xl md:text-4xl font-bold">Liên Hiệp Phát Logistics</h1>
             </div>
-            <!-- <p class="text-xl md:text-2xl font-bold mb-2">Tra cứu vận đơn</p> -->
-
-            <div class="w-full max-w-4xl flex flex-col items-center">
-                <div
-                    class="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-6 text-black max-w-md w-full text-center">
-                    <i class="fas fa-cogs text-4xl text-orange-500 mb-4"></i>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Đang phát triển...</h3>
-                    <p class="text-gray-600">Hệ thống tra cứu vận đơn đang được phát triển để phục vụ quý khách tốt hơn.
-                    </p>
-                    <p class="text-gray-600 mt-2">Vui lòng quay lại sau hoặc liên hệ với chúng tôi qua hotline để được
-                        hỗ trợ.</p>
-                    <a href="tel:0123456789"
-                        class="inline-block mt-4 px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-medium rounded-lg transition-all shadow-sm hover:shadow">
-                        <i class="fas fa-phone-alt mr-2"></i>Gọi ngay
-                    </a>
-                </div>
-
-                <!-- Original tracking search form (commented out during update) 
-                <div class="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-6 text-black max-w-md w-full">
-                    <div class="relative">
-                        <input type="text" id="tracking-input" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none" placeholder="Nhập mã vận đơn (ngăn cách bằng dấu phẩy nếu có nhiều mã)">
-                        <button onclick="searchTracking()" class="absolute right-0 top-0 h-full px-4 bg-orange-500 text-white rounded-r-lg hover:bg-orange-600 transition-colors">
-                            <i class="fas fa-search mr-1"></i>Tra cứu
-                        </button>
-                    </div>
-                    <div id="tracking-results-container" class="mt-4 bg-gray-50 rounded-lg p-4 max-h-[400px] overflow-y-auto hidden">
-                        <h4 class="text-sm font-medium text-gray-700 mb-2">Kết quả tra cứu:</h4>
-                        <div id="tracking-results" class="space-y-3 divide-y divide-gray-200"></div>
-                    </div>
-                </div>
-                -->
-            </div>
+            <p class="text-xl md:text-2xl font-bold mb-2">Dịch Vụ</p>
+            <p class="text-xl text-center max-w-2xl">Đối tác đáng tin cậy trong lĩnh vực logistics toàn diện</p>
+            <p class="text-xl font-bold mt-2">HOTLINE: 0866.775.188</p>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="py-16 bg-white">
+    <!-- About Us Section -->
+    <section class="py-12 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-center text-3xl font-bold text-gray-800 mb-12">Về chúng tôi</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-orange-50 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                    <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4">
-                        <i class="fas fa-truck text-orange-600 text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2 text-gray-800">Vận chuyển toàn cầu</h3>
-                    <p class="text-gray-600">Chúng tôi là công ty logistics hàng đầu, cung cấp dịch vụ vận chuyển nhanh
-                        chóng và đáng tin cậy.</p>
+            <div class="max-w-5xl mx-auto">
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">GIỚI THIỆU VỀ LIÊN HIỆP PHÁT LOGISTICS
+                    </h2>
+                    <p class="text-gray-700 mb-4 text-xl">Chúng tôi là đối tác đáng tin cậy trong lĩnh vực logistics
+                        toàn diện, luôn mang đến giải pháp tối ưu cho mọi nhu cầu của khách hàng với tâm huyết, niềm tin
+                        và tốc độ vượt trội. Với những dịch vụ chất lượng:</p>
                 </div>
-                <div class="bg-orange-50 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                    <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4">
-                        <i class="fas fa-warehouse text-orange-600 text-xl"></i>
+
+                <!-- Services List -->
+                <div class="space-y-6">
+                    <div class="bg-orange-50 rounded-lg p-6 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="flex-shrink-0 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Vận chuyển xuất nhập khẩu chính ngạch
+                                </h3>
+                                <p class="text-gray-700">Sự chính xác và đảm bảo cao giúp hàng hóa của bạn đến nơi an
+                                    toàn và đúng thời gian.</p>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 text-gray-800">Dịch vụ</h3>
-                    <p class="text-gray-600">Vận chuyển quốc tế, giao hàng nội địa, lưu kho và quản lý chuỗi cung ứng.
+
+                    <div class="bg-orange-50 rounded-lg p-6 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="flex-shrink-0 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Dịch vụ đóng gói và vận chuyển từ Trung
+                                    Quốc về Việt Nam</h3>
+                                <p class="text-gray-700">Chúng tôi đóng gói kỹ lưỡng và giao đến địa chỉ yêu cầu với giá
+                                    tốt nhất, tốc độ nhanh nhất và an toàn tuyệt đối.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-orange-50 rounded-lg p-6 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="flex-shrink-0 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Hướng dẫn mua hàng trên các trang
+                                    thương mại điện tử Trung Quốc</h3>
+                                <p class="text-gray-700">Hỗ trợ thương nhân Việt Nam tiếp cận và đặt mua hàng hóa
+                                    taobao/1688 và các trang TMĐT khác một cách dễ dàng, hiệu quả.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-orange-50 rounded-lg p-6 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="flex-shrink-0 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Tuyển cộng tác viên gom order sỉ và lẻ
+                                </h3>
+                                <p class="text-gray-700">Mở ra cơ hội hợp tác và kinh doanh, giúp mở rộng mạng lưới bán
+                                    hàng.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-orange-50 rounded-lg p-6 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="flex-shrink-0 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Cung cấp nguồn hàng tận xưởng</h3>
+                                <p class="text-gray-700">Đảm bảo chất lượng sản phẩm trực tiếp từ các xưởng sản xuất với
+                                    giá cạnh tranh.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-orange-50 rounded-lg p-6 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="flex-shrink-0 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Kết nối với các nhà sản xuất OEM/ODM
+                                </h3>
+                                <p class="text-gray-700">Tùy chỉnh sản phẩm theo yêu cầu riêng, đáp ứng mọi nhu cầu cá
+                                    nhân hóa.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-orange-50 rounded-lg p-6 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="flex-shrink-0 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Hỗ trợ thương lượng điều kiện vận
+                                    chuyển và chính sách bảo hành</h3>
+                                <p class="text-gray-700">Đảm bảo quyền lợi và sự hài lòng tối ưu của khách hàng.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-orange-50 rounded-lg p-6 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="flex-shrink-0 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Hướng dẫn kiểm tra chất lượng hàng hóa
+                                    trước khi đặt cọc</h3>
+                                <p class="text-gray-700">Giúp bạn yên tâm khi đầu tư vào sản phẩm.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- China Import Service Banner Section -->
+                <div class="mt-16 mb-16">
+                    <h2 class="text-2xl font-bold text-center text-gray-800 mb-8">DỊCH VỤ NHẬP HÀNG TRUNG QUỐC</h2>
+                    <div class="bg-orange-50 rounded-xl p-6 shadow-md overflow-hidden">
+                        <div class="flex flex-col md:flex-row items-center gap-8">
+                            <div class="w-full md:w-1/2">
+                                <img src="about-background.jpg" alt="Dịch vụ nhập hàng Trung Quốc"
+                                    class="w-full h-auto rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            </div>
+                            <div class="w-full md:w-1/2">
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">Giải pháp nhập hàng toàn diện từ Trung
+                                    Quốc</h3>
+                                <p class="text-gray-700 mb-4">Liên Hiệp Phát Logistics cung cấp dịch vụ nhập hàng Trung
+                                    Quốc chuyên nghiệp với đội ngũ nhân viên giàu kinh nghiệm, am hiểu thị trường và quy
+                                    trình thông quan.</p>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                        <span class="text-gray-700">Tìm nguồn hàng chất lượng với giá tốt nhất</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                        <span class="text-gray-700">Đàm phán và đặt hàng trực tiếp với nhà sản
+                                            xuất</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                        <span class="text-gray-700">Kiểm tra chất lượng hàng hóa tại nguồn</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                        <span class="text-gray-700">Đóng gói an toàn và vận chuyển nhanh chóng</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                        <span class="text-gray-700">Thông quan và giao hàng tận nơi</span>
+                                    </li>
+                                </ul>
+                                <div class="mt-6">
+                                    <a href="price.html"
+                                        class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-6 rounded-lg transition-colors">Xem
+                                        bảng giá</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Core Values Section -->
+                <div class="mt-16">
+                    <h2 class="text-2xl font-bold text-center text-gray-800 mb-10">GIÁ TRỊ CỐT LÕI</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div
+                            class="bg-orange-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow text-center">
+                            <div
+                                class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mb-4 mx-auto">
+                                <i class="fas fa-heart text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4 text-gray-800">TÂM</h3>
+                            <p class="text-gray-700">Tâm là sự tận tâm trong từng khâu dịch vụ của chúng tôi: từ việc
+                                lắng nghe nhu cầu, đến hành động thực hiện và theo dõi sau bán hàng, chúng tôi luôn đặt
+                                trái tim vào mọi việc.</p>
+                        </div>
+                        <div
+                            class="bg-orange-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow text-center">
+                            <div
+                                class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mb-4 mx-auto">
+                                <i class="fas fa-handshake text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4 text-gray-800">TÍN</h3>
+                            <p class="text-gray-700">Tín là niềm tin quý báu mà khách hàng dành cho chúng tôi – sự đáng
+                                tin cậy trong từng giao dịch, cam kết thực hiện đúng lời hứa, mang lại sự an tâm và tin
+                                cậy tuyệt đối.</p>
+                        </div>
+                        <div
+                            class="bg-orange-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow text-center">
+                            <div
+                                class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mb-4 mx-auto">
+                                <i class="fas fa-bolt text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4 text-gray-800">TỐC</h3>
+                            <p class="text-gray-700">Tốc thể hiện mức độ nhanh nhẹn và hiệu quả trong xử lý từng yêu
+                                cầu, giúp giao hàng, đóng gói và hỗ trợ khách hàng một cách kịp thời và chính xác.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mission Statement -->
+                <div class="mt-16 bg-orange-50 rounded-xl p-8 shadow-sm">
+                    <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">PHƯƠNG CHÂM HOẠT ĐỘNG</h2>
+                    <p class="text-gray-700 text-xl text-center">
+                        Với phương châm "Tâm - Tín - Tốc", Liên Hiệp Phát Logistics không chỉ mang lại dịch vụ logistics
+                        chuyên nghiệp mà còn tạo dựng mối quan hệ bền chặt với khách hàng, giúp mỗi giao dịch trở thành
+                        một hành trình thành công và tin cậy.
                     </p>
                 </div>
-                <div class="bg-orange-50 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                    <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4">
-                        <i class="fas fa-star text-orange-600 text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2 text-gray-800">Nhận xét</h3>
-                    <p class="text-gray-600">"Dịch vụ tuyệt vời, giao hàng đúng hẹn!" - Khách hàng A</p>
+
+                <!-- Contact CTA -->
+                <div class="mt-12 text-center">
+                    <p class="text-gray-700 mb-4">Chúng tôi hy vọng với những giá trị cốt lõi trên, Liên Hiệp Phát
+                        Logistics sẽ là người bạn đồng hành lý tưởng trên con đường phát triển và mở rộng kinh doanh của
+                        bạn.</p>
+                    <p class="text-gray-800 font-bold">Bạn có thắc mắc về bất kỳ yêu cầu nào liên quan đến quy trình làm
+                        việc của chúng tôi không? Hãy liên hệ hotline: <a href="tel:0866775488"
+                            class="text-orange-600 hover:underline">0866.775.188</a></p>
                 </div>
             </div>
         </div>
@@ -158,7 +355,7 @@
             <p class="text-gray-600 max-w-2xl mx-auto mb-8">Đội ngũ chuyên viên của chúng tôi luôn sẵn sàng giúp đỡ bạn
                 với mọi yêu cầu vận chuyển.</p>
             <button
-                class="bg-orange-500 hover:bg-orange-600 text-white font-medium py-3 px-8 rounded-lg transition-colors">Liên
+                class="bg-orange-500 hover:bg-orange-600 text-white font-medium py-3 px-8 rounded-lg transition-colors" href="tel:0866775488">Liên
                 hệ ngay</button>
         </div>
     </section>
@@ -172,13 +369,13 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                 <div>
                     <h3 class="text-xl font-bold mb-4">Công ty Liên Hiệp Phát Logistics</h3>
-                    <p class="text-gray-300 mb-4">Cung cấp dịch vụ logistics chất lượng cao trên toàn cầu.</p>
+                    <p class="text-gray-300 mb-4">Cung cấp dịch vụ order và vận chuyển Trung - Việt chất lượng cao.</p>
                     <div class="flex space-x-4">
-                        <a href="https://facebook.com" target="_blank"
+                        <a href="https://www.facebook.com/LienHiepPhat.Hayorder" target="_blank"
                             class="text-gray-300 hover:text-white transition-colors">
                             <i class="fab fa-facebook text-xl"></i>
                         </a>
-                        <a href="https://zalo.me" target="_blank"
+                        <a href="https://zalo.me/g/hillsr248" target="_blank"
                             class="text-gray-300 hover:text-white transition-colors">
                             <i class="fas fa-comment text-xl"></i>
                         </a>
@@ -198,7 +395,7 @@
                         </li>
                         <li class="flex items-center gap-2">
                             <i class="fas fa-phone"></i>
-                            <a href="tel:0123456789" class="hover:text-white transition-colors">0123 456 789</a>
+                            <a href="tel:0866775188" class="hover:text-white transition-colors">0866 775 188</a>
                         </li>
                     </ul>
                 </div>
@@ -216,150 +413,23 @@
             </div>
         </div>
     </footer>
-
     <script>
-        function searchTracking() {
-            const input = document.getElementById('tracking-input').value;
-            const resultsDiv = document.getElementById('tracking-results');
-            const resultsContainer = document.getElementById('tracking-results-container');
-            resultsDiv.innerHTML = '';
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
 
-            if (!input) {
-                resultsContainer.classList.add('hidden');
-                return;
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function () {
+                    // Toggle the mobile menu visibility
+                    if (mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.remove('hidden');
+                    } else {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
             }
-
-            // Show results container
-            resultsContainer.classList.remove('hidden');
-
-            const trackingNumbers = input.split(',').map(num => num.trim());
-
-            if (trackingNumbers.length === 0) {
-                resultsDiv.innerHTML = `<p class="py-3 text-red-500">Vui lòng nhập mã vận đơn!</p>`;
-                return;
-            }
-
-            trackingNumbers.forEach((number, index) => {
-                const status = getMockStatus(index);
-                const statusClass = getStatusClass(status);
-                const dateUpdated = getMockDate();
-                const packageSize = getMockPackageSize();
-                const statusHistory = getMockStatusHistory();
-
-                const result = document.createElement('div');
-                result.className = 'py-4 first:pt-0 last:pb-0';
-                result.innerHTML = `
-                    <div class="flex items-center justify-between mb-2">
-                        <span class="font-medium text-gray-800">Vận đơn #${number}</span>
-                        <span class="${statusClass} px-2 py-1 rounded-full text-xs font-medium">
-                            ${status}
-                        </span>
-                    </div>
-                    <div class="flex items-center justify-between text-sm text-gray-500 mb-2">
-                        <div class="flex items-center">
-                            <i class="far fa-clock mr-1"></i>
-                            <span>Cập nhật: ${dateUpdated}</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-box mr-1"></i>
-                            <span>Kích thước: ${packageSize}</span>
-                        </div>
-                    </div>
-                    <div class="mt-3 border-t pt-3 border-gray-100">
-                        <div class="text-sm font-medium mb-3 text-gray-700">Lịch sử đơn hàng:</div>
-                        
-                        <!-- Timeline layout for status history -->
-                        <div class="relative">
-                            <!-- Vertical timeline line -->
-                            <div class="absolute w-0.5 bg-gray-200 h-full left-[7px] top-0"></div>
-                            
-                            <!-- Status items -->
-                            <div class="space-y-3">
-                                ${statusHistory.map((item, i) => `
-                                    <div class="flex items-start">
-                                        <div class="w-3.5 h-3.5 rounded-full ${getStatusColor(item.name)} z-10 mt-0.5 shadow-sm"></div>
-                                        <div class="ml-4">
-                                            <div class="flex items-center">
-                                                <span class="font-medium text-sm text-gray-800">${item.name}</span>
-                                                <span class="text-gray-400 text-xs ml-2">${item.time.split(',')[0]}</span>
-                                            </div>
-                                            <p class="text-xs text-gray-500 mt-0.5">${getStatusDescription(item.name)}</p>
-                                        </div>
-                                    </div>
-                                `).join('')}
-                            </div>
-                        </div>
-                    </div>
-                `;
-                resultsDiv.appendChild(result);
-            });
-        }
-
-        function getMockStatus(index) {
-            const statuses = ['Đang xử lý', 'Đang giao hàng', 'Đã giao', 'Không tìm thấy'];
-            return statuses[index % statuses.length];
-        }
-
-        function getStatusClass(status) {
-            switch (status) {
-                case 'Đang xử lý': return 'bg-yellow-100 text-yellow-800';
-                case 'Đang giao hàng': return 'bg-orange-100 text-orange-800';
-                case 'Đã giao': return 'bg-green-100 text-green-800';
-                case 'Không tìm thấy': return 'bg-red-100 text-red-800';
-                default: return 'bg-gray-100 text-gray-800';
-            }
-        }
-
-        function getMockDate() {
-            const now = new Date();
-            return now.toLocaleDateString('vi-VN', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
-        }
-
-        function getMockPackageSize() {
-            const sizes = ['30 × 20 × 15 cm (1.2 kg)', '50 × 40 × 30 cm (3.5 kg)', '10 × 10 × 5 cm (0.3 kg)', '100 × 50 × 50 cm (8 kg)'];
-            return sizes[Math.floor(Math.random() * sizes.length)];
-        }
-
-        function getMockStatusHistory() {
-            // Create timestamps with decreasing dates
-            const now = new Date();
-            const daysBefore = (days) => {
-                const date = new Date(now);
-                date.setDate(date.getDate() - days);
-                return date.toLocaleDateString('vi-VN', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
-            };
-
-            return [
-                { name: 'Giao nhận', time: daysBefore(0) },
-                { name: 'Đang giao hàng', time: daysBefore(1) },
-                { name: 'Thông quan', time: daysBefore(3) },
-                { name: 'Nhập kho', time: daysBefore(4) },
-                { name: 'Đã tiếp nhận', time: daysBefore(5) }
-            ];
-        }
-
-        // Update status colors to match orange theme
-        function getStatusColor(status) {
-            switch (status) {
-                case 'Đã tiếp nhận': return 'bg-purple-500';
-                case 'Nhập kho': return 'bg-orange-500';
-                case 'Thông quan': return 'bg-yellow-500';
-                case 'Đang giao hàng': return 'bg-orange-600';
-                case 'Giao nhận': return 'bg-green-500';
-                default: return 'bg-gray-500';
-            }
-        }
-
-        function getStatusDescription(status) {
-            switch (status) {
-                case 'Đã tiếp nhận': return 'Đơn hàng đã được tiếp nhận vào hệ thống';
-                case 'Nhập kho': return 'Hàng đã được nhập vào kho vận chuyển';
-                case 'Thông quan': return 'Hàng đã qua kiểm tra hải quan';
-                case 'Đang giao hàng': return 'Đơn hàng đang được giao tới địa chỉ nhận';
-                case 'Giao nhận': return 'Đơn hàng đã được giao thành công';
-                default: return '';
-            }
-        }
+        });
     </script>
 </body>
 

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Công ty Liên Hiệp Phát Logistics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        html {
+            font-size: 90%;
+            /* Giảm kích thước font mặc định xuống 90% */
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            200: '#fed7aa',
+                            300: '#fdba74',
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                            800: '#9a3412',
+                            900: '#7c2d12',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="min-h-screen flex flex-col bg-orange-50">
+    <!-- Header -->
+    <header class="bg-orange-500 shadow-md sticky top-0 z-10">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <div class="flex items-center gap-1">
+                    <img src="logo.png" alt="Company Logo" class="h-7 w-auto">
+                    <span class="font-bold text-xl text-white">LHP Logistics</span>
+                </div>
+                <nav class="hidden md:flex space-x-1">
+                    <a href="index.html"
+                        class="px-3 py-1.5 rounded-lg hover:bg-orange-600 transition-colors text-white font-medium">Trang
+                        chủ</a>
+                    <!-- <button class="px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors text-white font-medium">Dịch vụ</button> -->
+                    <a href="search-order.html"
+                        class="px-3 py-1.5 rounded-lg bg-orange-700 transition-colors text-white font-medium">Tra
+                        Cứu Vận Đơn</a>
+                    <a href="price.html"
+                        class="px-3 py-1.5 rounded-lg hover:bg-orange-600 transition-colors text-white font-medium">Giá
+                        cước</a>
+                    <!-- <button class="px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors text-white font-medium">Liên hệ</button> -->
+                </nav>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg bg-orange-600 text-white">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation Menu (hidden by default) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-orange-600 pb-2">
+            <nav class="container mx-auto px-4 flex flex-col space-y-2">
+                <a href="index.html" class="px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors text-white font-medium">
+                    Trang Chủ
+                </a>
+                <a href="search-order.html" class="px-4 py-2 rounded-lg bg-orange-700 hover:bg-orange-800 transition-colors text-white font-medium">
+                    Tra Cứu Vận Đơn
+                </a>
+                <a href="price.html" class="px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors text-white font-medium">
+                    Dịch Vụ
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative text-white mt-[40px]">
+        <!-- Background image with overlay -->
+        <div class="fixed inset-0 bg-cover bg-center bg-no-repeat"
+            style="background-image: url('logistics-background.jpg'); z-index: -2;"></div>
+        <div class="fixed inset-0 bg-black/60" style="z-index: -1;"></div>
+        <div class="fixed inset-0 bg-gradient-to-r" style="z-index: -1;"></div>
+
+        <div class="container mx-auto px-4 py-20 md:py-8 relative z-1 flex flex-col items-center">
+            <div class="flex items-center gap-3 mb-6">
+                <img src="logo.png" alt="Company Logo" class="h-12 w-auto">
+                <h1 class="text-2xl md:text-4xl font-bold">Liên Hiệp Phát Logistics</h1>
+            </div>
+            <!-- <p class="text-xl md:text-2xl font-bold mb-2">Tra cứu vận đơn</p> -->
+
+            <div class="w-full max-w-4xl flex flex-col items-center">
+                <div
+                    class="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-6 text-black max-w-md w-full text-center">
+                    <!-- <i class="fas fa-sync-alt animate-spin text-4xl text-orange-500 mb-4"></i> -->
+                    <i class="fas fa-cog text-2xl text-orange-500 mb-4 animate-spin relative -top-[15px]"></i>
+                    <i class="fas fa-cog text-2xl text-orange-500 mb-4 animate-spin"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Đang phát triển...</h3>
+                    <p class="text-gray-600">Hệ thống tra cứu vận đơn đang được phát triển để phục vụ quý khách tốt hơn.
+                    </p>
+                    <p class="text-gray-600 mt-2">Vui lòng quay lại sau hoặc liên hệ với chúng tôi qua hotline để được
+                        hỗ trợ.</p>
+                    <a href="tel:0866775188"
+                        class="inline-block mt-4 px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-medium rounded-lg transition-all shadow-sm hover:shadow">
+                        <i class="fas fa-phone-alt mr-2"></i>Gọi ngay
+                    </a>
+                </div>
+
+                <!-- Original tracking search form (commented out during update) 
+                <div class="bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-6 text-black max-w-md w-full">
+                    <div class="relative">
+                        <input type="text" id="tracking-input" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none" placeholder="Nhập mã vận đơn (ngăn cách bằng dấu phẩy nếu có nhiều mã)">
+                        <button onclick="searchTracking()" class="absolute right-0 top-0 h-full px-4 bg-orange-500 text-white rounded-r-lg hover:bg-orange-600 transition-colors">
+                            <i class="fas fa-search mr-1"></i>Tra cứu
+                        </button>
+                    </div>
+                    <div id="tracking-results-container" class="mt-4 bg-gray-50 rounded-lg p-4 max-h-[400px] overflow-y-auto hidden">
+                        <h4 class="text-sm font-medium text-gray-700 mb-2">Kết quả tra cứu:</h4>
+                        <div id="tracking-results" class="space-y-3 divide-y divide-gray-200"></div>
+                    </div>
+                </div>
+                -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-center text-3xl font-bold text-gray-800 mb-12">Về chúng tôi</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-orange-50 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-truck text-orange-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">Vận chuyển toàn cầu</h3>
+                    <p class="text-gray-600">Chúng tôi là công ty logistics hàng đầu, cung cấp dịch vụ vận chuyển nhanh
+                        chóng và đáng tin cậy.</p>
+                </div>
+                <div class="bg-orange-50 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-warehouse text-orange-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">Dịch vụ</h3>
+                    <p class="text-gray-600">Vận chuyển quốc tế, giao hàng nội địa, lưu kho và quản lý chuỗi cung ứng.
+                    </p>
+                </div>
+                <div class="bg-orange-50 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-star text-orange-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">Nhận xét</h3>
+                    <p class="text-gray-600">"Dịch vụ tuyệt vời, giao hàng đúng hẹn!" - Khách hàng A</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-orange-50 py-6">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6">Bạn cần hỗ trợ?</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-8">Đội ngũ chuyên viên của chúng tôi luôn sẵn sàng giúp đỡ bạn
+                với mọi yêu cầu vận chuyển.</p>
+            <button
+                class="bg-orange-500 hover:bg-orange-600 text-white font-medium py-3 px-8 rounded-lg transition-colors">Liên
+                hệ ngay</button>
+        </div>
+    </section>
+
+    <!-- Separator Line -->
+    <hr class="border-t border-gray-300 max-w-7xl mx-auto my-0">
+
+    <!-- Footer -->
+    <footer class="bg-[#2C2C2C] text-white pt-6 pb-6 mt-auto">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Công ty Liên Hiệp Phát Logistics</h3>
+                    <p class="text-gray-300 mb-4">Cung cấp dịch vụ order và vận chuyển Trung - Việt chất lượng cao.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/LienHiepPhat.Hayorder" target="_blank"
+                            class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="https://zalo.me/g/hillsr248" target="_blank"
+                            class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fas fa-comment text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Liên hệ</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Đường Giao Hàng, TP. HCM</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:contact@logisticsabc.com"
+                                class="hover:text-white transition-colors">contact@logisticsabc.com</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:0866775188" class="hover:text-white transition-colors">0866 775 188</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Giờ làm việc</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>Thứ 2 - Thứ 6: 8:00 - 17:30</li>
+                        <li>Thứ 7: 8:00 - 12:00</li>
+                        <li>Chủ nhật: Nghỉ</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center text-gray-400 text-sm">
+                &copy; 2023 Công ty TNHH Liên Hiệp Phát Logistics. Tất cả quyền được bảo lưu.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function searchTracking() {
+            const input = document.getElementById('tracking-input').value;
+            const resultsDiv = document.getElementById('tracking-results');
+            const resultsContainer = document.getElementById('tracking-results-container');
+            resultsDiv.innerHTML = '';
+
+            if (!input) {
+                resultsContainer.classList.add('hidden');
+                return;
+            }
+
+            // Show results container
+            resultsContainer.classList.remove('hidden');
+
+            const trackingNumbers = input.split(',').map(num => num.trim());
+
+            if (trackingNumbers.length === 0) {
+                resultsDiv.innerHTML = `<p class="py-3 text-red-500">Vui lòng nhập mã vận đơn!</p>`;
+                return;
+            }
+
+            trackingNumbers.forEach((number, index) => {
+                const status = getMockStatus(index);
+                const statusClass = getStatusClass(status);
+                const dateUpdated = getMockDate();
+                const packageSize = getMockPackageSize();
+                const statusHistory = getMockStatusHistory();
+
+                const result = document.createElement('div');
+                result.className = 'py-4 first:pt-0 last:pb-0';
+                result.innerHTML = `
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="font-medium text-gray-800">Vận đơn #${number}</span>
+                        <span class="${statusClass} px-2 py-1 rounded-full text-xs font-medium">
+                            ${status}
+                        </span>
+                    </div>
+                    <div class="flex items-center justify-between text-sm text-gray-500 mb-2">
+                        <div class="flex items-center">
+                            <i class="far fa-clock mr-1"></i>
+                            <span>Cập nhật: ${dateUpdated}</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-box mr-1"></i>
+                            <span>Kích thước: ${packageSize}</span>
+                        </div>
+                    </div>
+                    <div class="mt-3 border-t pt-3 border-gray-100">
+                        <div class="text-sm font-medium mb-3 text-gray-700">Lịch sử đơn hàng:</div>
+                        
+                        <!-- Timeline layout for status history -->
+                        <div class="relative">
+                            <!-- Vertical timeline line -->
+                            <div class="absolute w-0.5 bg-gray-200 h-full left-[7px] top-0"></div>
+                            
+                            <!-- Status items -->
+                            <div class="space-y-3">
+                                ${statusHistory.map((item, i) => `
+                                    <div class="flex items-start">
+                                        <div class="w-3.5 h-3.5 rounded-full ${getStatusColor(item.name)} z-10 mt-0.5 shadow-sm"></div>
+                                        <div class="ml-4">
+                                            <div class="flex items-center">
+                                                <span class="font-medium text-sm text-gray-800">${item.name}</span>
+                                                <span class="text-gray-400 text-xs ml-2">${item.time.split(',')[0]}</span>
+                                            </div>
+                                            <p class="text-xs text-gray-500 mt-0.5">${getStatusDescription(item.name)}</p>
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    </div>
+                `;
+                resultsDiv.appendChild(result);
+            });
+        }
+
+        function getMockStatus(index) {
+            const statuses = ['Đang xử lý', 'Đang giao hàng', 'Đã giao', 'Không tìm thấy'];
+            return statuses[index % statuses.length];
+        }
+
+        function getStatusClass(status) {
+            switch (status) {
+                case 'Đang xử lý': return 'bg-yellow-100 text-yellow-800';
+                case 'Đang giao hàng': return 'bg-orange-100 text-orange-800';
+                case 'Đã giao': return 'bg-green-100 text-green-800';
+                case 'Không tìm thấy': return 'bg-red-100 text-red-800';
+                default: return 'bg-gray-100 text-gray-800';
+            }
+        }
+
+        function getMockDate() {
+            const now = new Date();
+            return now.toLocaleDateString('vi-VN', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
+        }
+
+        function getMockPackageSize() {
+            const sizes = ['30 × 20 × 15 cm (1.2 kg)', '50 × 40 × 30 cm (3.5 kg)', '10 × 10 × 5 cm (0.3 kg)', '100 × 50 × 50 cm (8 kg)'];
+            return sizes[Math.floor(Math.random() * sizes.length)];
+        }
+
+        function getMockStatusHistory() {
+            // Create timestamps with decreasing dates
+            const now = new Date();
+            const daysBefore = (days) => {
+                const date = new Date(now);
+                date.setDate(date.getDate() - days);
+                return date.toLocaleDateString('vi-VN', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
+            };
+
+            return [
+                { name: 'Giao nhận', time: daysBefore(0) },
+                { name: 'Đang giao hàng', time: daysBefore(1) },
+                { name: 'Thông quan', time: daysBefore(3) },
+                { name: 'Nhập kho', time: daysBefore(4) },
+                { name: 'Đã tiếp nhận', time: daysBefore(5) }
+            ];
+        }
+
+        // Update status colors to match orange theme
+        function getStatusColor(status) {
+            switch (status) {
+                case 'Đã tiếp nhận': return 'bg-purple-500';
+                case 'Nhập kho': return 'bg-orange-500';
+                case 'Thông quan': return 'bg-yellow-500';
+                case 'Đang giao hàng': return 'bg-orange-600';
+                case 'Giao nhận': return 'bg-green-500';
+                default: return 'bg-gray-500';
+            }
+        }
+
+        function getStatusDescription(status) {
+            switch (status) {
+                case 'Đã tiếp nhận': return 'Đơn hàng đã được tiếp nhận vào hệ thống';
+                case 'Nhập kho': return 'Hàng đã được nhập vào kho vận chuyển';
+                case 'Thông quan': return 'Hàng đã qua kiểm tra hải quan';
+                case 'Đang giao hàng': return 'Đơn hàng đang được giao tới địa chỉ nhận';
+                case 'Giao nhận': return 'Đơn hàng đã được giao thành công';
+                default: return '';
+            }
+        }
+
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function () {
+                    // Toggle the mobile menu visibility
+                    if (mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.remove('hidden');
+                    } else {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
