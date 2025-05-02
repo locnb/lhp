@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Giá Vận Chuyển - Liên Hiệp Phát Logistics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        html {
+            font-size: 90%; /* Giảm kích thước font mặc định xuống 90% */
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            200: '#fed7aa',
+                            300: '#fdba74',
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                            800: '#9a3412',
+                            900: '#7c2d12',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="min-h-screen flex flex-col bg-orange-50">
+    <!-- Header -->
+    <header class="bg-orange-500 shadow-md sticky top-0 z-10">
+        <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+            <div class="flex items-center space-x-6">
+                <div class="flex items-center gap-2">
+                    <img src="logo.png" alt="Company Logo" class="h-8 w-auto">
+                    <span class="font-bold text-xl text-white">LHP Logistics</span>
+                </div>
+                <nav class="hidden md:flex space-x-1">
+                    <a href="index.html"
+                        class="px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors text-white font-medium">Trang
+                        chủ</a>
+                    <!-- <button class="px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors text-white font-medium">Dịch vụ</button> -->
+                    <a href="about.html"
+                        class="px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors text-white font-medium">Dịch
+                        Vụ</a>
+                    <a href="price.html"
+                        class="home-btn px-4 py-2 rounded-lg bg-orange-600 hover:bg-orange-700 transition-colors text-white font-medium">Giá
+                        cước</a>
+                    <!-- <button class="px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors text-white font-medium">Liên hệ</button> -->
+                </nav>
+            </div>
+            <!-- <div class="flex items-center space-x-4">
+                <a href="login.html" class="login-btn flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white hover:bg-orange-50 text-orange-600 font-medium shadow-sm hover:shadow transition-all">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Đăng nhập</span>
+                </a>
+                <button class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg bg-orange-600 text-white">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div> -->
+        </div>
+    </header>
+
+    <!-- Page Title Section -->
+    <section class="relative text-white mt-[20px]">
+        <!-- Background image with overlay -->
+        <div class="fixed inset-0 bg-cover bg-center bg-no-repeat"
+            style="background-image: url('logistics-background.jpg'); z-index: -2;"></div>
+        <div class="fixed inset-0 bg-black/60" style="z-index: -1;"></div>
+        <div class="fixed inset-0 bg-gradient-to-r" style="z-index: -1;"></div>
+
+        <div class="container mx-auto px-4 py-8 md:py-20 relative z-1 flex flex-col items-center">
+            <div class="flex items-center gap-2 mb-2">
+                <img src="logo.png" alt="Company Logo" class="h-10 w-auto">
+                <h1 class="text-2xl md:text-4xl font-bold">Liên Hiệp Phát Logistics</h1>
+            </div>
+            <p class="text-xl md:text-2xl font-bold mb-2">Bảng Giá Vận Chuyển</p>
+            <p class="text-xl text-center max-w-2xl">VẬN CHUYỂN TRUNG - VIỆT: CHÍNH NGẠCH - TIỂU NGẠCH - TMĐT</p>
+            <p class="text-xl font-bold mt-2">HOTLINE: 0866.775.488</p>
+        </div>
+    </section>
+
+    <!-- Pricing Table Section -->
+    <section class="py-10 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-2xl font-bold text-center text-gray-800 mb-2">GIÁ VẬN CHUYỂN TIỂU NGHẠCH BẰNG TƯỜNG - HÀ
+                    NỘI</h2>
+                <p class="text-center text-gray-600 mb-6">(Áp dụng từ 04/2025)</p>
+
+                <!-- Pricing Table -->
+                <div class="overflow-x-auto">
+                    <table class="w-full border-collapse">
+                        <thead>
+                            <tr>
+                                <th class="bg-orange-200 text-orange-800 border border-orange-300 p-3 text-left w-1/4">
+                                    Loại hàng</th>
+                                <th class="bg-orange-200 text-orange-800 border border-orange-300 p-3 text-center"
+                                    colspan="2">Trên 500 Kg & 5M3</th>
+                                <th class="bg-orange-200 text-orange-800 border border-orange-300 p-3 text-center"
+                                    colspan="2">Từ 100 Kg & 1M3</th>
+                            </tr>
+                            <tr>
+                                <th class="bg-orange-100 border border-orange-300 p-2"></th>
+                                <th
+                                    class="bg-orange-100 text-orange-800 border border-orange-300 p-2 text-center w-1/6">
+                                    Kg</th>
+                                <th
+                                    class="bg-orange-100 text-orange-800 border border-orange-300 p-2 text-center w-1/6">
+                                    M3</th>
+                                <th
+                                    class="bg-orange-100 text-orange-800 border border-orange-300 p-2 text-center w-1/6">
+                                    Kg</th>
+                                <th
+                                    class="bg-orange-100 text-orange-800 border border-orange-300 p-2 text-center w-1/6">
+                                    M3</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-yellow-50">
+                                <td class="border border-orange-300 p-3 font-medium">Hàng siêu trọng 1 tấn/ m3 (Đầu tấn)
+                                </td>
+                                <td class="border border-orange-300 p-3 text-center">5.000</td>
+                                <td class="border border-orange-300 p-3 text-center"></td>
+                                <td class="border border-orange-300 p-3 text-center">9.500</td>
+                                <td class="border border-orange-300 p-3 text-center"></td>
+                            </tr>
+                            <tr>
+                                <td class="border border-orange-300 p-3 font-medium">Hàng nặng từ 500Kg/ m3</td>
+                                <td class="border border-orange-300 p-3 text-center">6.000</td>
+                                <td class="border border-orange-300 p-3 text-center"></td>
+                                <td class="border border-orange-300 p-3 text-center">10.500</td>
+                                <td class="border border-orange-300 p-3 text-center"></td>
+                            </tr>
+                            <tr class="bg-yellow-50">
+                                <td class="border border-orange-300 p-3 font-medium">Lô Phổ Thông - không thương hiệu
+                                </td>
+                                <td class="border border-orange-300 p-3 text-center">8.000</td>
+                                <td class="border border-orange-300 p-3 text-center">1.850.000</td>
+                                <td class="border border-orange-300 p-3 text-center">11.500</td>
+                                <td class="border border-orange-300 p-3 text-center">2.150.000</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-orange-300 p-3 font-medium">Quần áo, vải cuộn, phụ kiện may mặc
+                                    ...</td>
+                                <td class="border border-orange-300 p-3 text-center">8.500</td>
+                                <td class="border border-orange-300 p-3 text-center">1.900.000</td>
+                                <td class="border border-orange-300 p-3 text-center">12.000</td>
+                                <td class="border border-orange-300 p-3 text-center">2.200.000</td>
+                            </tr>
+                            <tr class="bg-yellow-50">
+                                <td class="border border-orange-300 p-3 font-medium">Thiết bị âm thanh, linh kiện điện
+                                    tử, pin...</td>
+                                <td class="border border-orange-300 p-3 text-center">9.500</td>
+                                <td class="border border-orange-300 p-3 text-center">2.050.000</td>
+                                <td class="border border-orange-300 p-3 text-center">13.000</td>
+                                <td class="border border-orange-300 p-3 text-center">2.350.000</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-orange-300 p-3 font-medium">Hàng đặc biệt</td>
+                                <td class="border border-orange-300 p-3 text-center">11.000</td>
+                                <td class="border border-orange-300 p-3 text-center">2.250.000</td>
+                                <td class="border border-orange-300 p-3 text-center">14.500</td>
+                                <td class="border border-orange-300 p-3 text-center">2.550.000</td>
+                            </tr>
+                            <tr class="bg-yellow-50">
+                                <td class="border border-orange-300 p-3 font-medium">Hóa chất (Keo dán, sơn), thức ăn
+                                    chăn nuôi (chó mèo 1cm giá)</td>
+                                <td class="border border-orange-300 p-3 text-center">12.000</td>
+                                <td class="border border-orange-300 p-3 text-center">2.550.000</td>
+                                <td class="border border-orange-300 p-3 text-center">15.500</td>
+                                <td class="border border-orange-300 p-3 text-center">2.850.000</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-orange-300 p-3 font-medium">Máy cũ, cấu máy cũ</td>
+                                <td class="border border-orange-300 p-3 text-center"></td>
+                                <td class="border border-orange-300 p-3 text-center"></td>
+                                <td class="border border-orange-300 p-3 text-center">12.000</td>
+                                <td class="border border-orange-300 p-3 text-center">2.450.000</td>
+                            </tr>
+                            <tr class="bg-yellow-50">
+                                <td class="border border-orange-300 p-3 font-medium">Line TMĐT</td>
+                                <td class="border border-orange-300 p-3 text-center" colspan="2">2 - 5 tấn/m</td>
+                                <td class="border border-orange-300 p-3 text-center" colspan="2">19k - 22k</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-orange-300 p-3 font-medium">Hàng Kuaidi tạp lẻ</td>
+                                <td class="border border-orange-300 p-3 text-center" colspan="2"></td>
+                                <td class="border border-orange-300 p-3 text-center" colspan="2">18.000</td>
+                            </tr>
+                            <tr class="bg-yellow-50">
+                                <td class="border border-orange-300 p-3 font-medium">Hàng Kuaidi tạp lẻ (đầu bao)</td>
+                                <td class="border border-orange-300 p-3 text-center" colspan="2"></td>
+                                <td class="border border-orange-300 p-3 text-center">12.000</td>
+                                <td class="border border-orange-300 p-3 text-center">2.150.000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Shipping Policy -->
+                <div class="mt-10">
+                    <h3 class="text-xl font-bold text-red-600 mb-4">CHÍNH SÁCH VẬN CHUYỂN</h3>
+                    <ol class="list-decimal pl-5 space-y-4">
+                        <li class="text-gray-800">
+                            <span class="font-medium">Khách hàng nhận, kiểm tra và phản hồi rõ tình trạng hàng hóa muộn
+                                nhất 1 ngày kể từ ngày nhận hàng kèm theo video khui hàng</span><br>
+                            <span class="text-gray-600">Quá thời gian 1 ngày bên vận chuyển không chịu trách
+                                nhiệm</span>
+                        </li>
+                        <li class="text-gray-800">
+                            <span class="font-medium">Hàng đổ vỡ: Đóng gỗ theo tiêu chuẩn và dán biểu tượng hàng dễ vỡ
+                                lên kiện hàng, đồng thời báo trước để bên vận chuyển có phương án vận chuyển</span><br>
+                            <span class="text-gray-600">Chúng tôi không chịu trách nhiệm với hàng hóa còn nguyên đai,
+                                nguyên kiện nhưng hỏng vỡ âm bên trong kiện hàng</span>
+                        </li>
+                        <li class="text-gray-800">
+                            <span class="font-medium">Thất lạc hàng: Do vận chuyển đền 100% giá trị hàng nhưng không
+                                vượt quá 3 lần cước và không quá 3 triệu/ kiện</span><br>
+                            <span class="text-gray-600">Khách mua bảo hiểm hàng hóa 3 - 5% thất lạc đền bù 100% giá trị
+                                và phải khai báo giá trị trước với bên vận chuyển</span>
+                        </li>
+                        <li class="text-gray-800">
+                            <span class="font-medium text-red-600">KHÔNG NHẬN CÁC MẶT HÀNG: TLĐT, đồ y tế, pin điện
+                                thoại, hàng dễ cháy nổ, hóa chất cấm, vũ khí, hàng cấm,...</span><br>
+                            <span class="text-gray-600">Vui lòng hỏi trước khi gửi, nếu có tình gửi về kho TQ sẽ tiêu
+                                hủa tịch thu tiêu hủy</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-orange-50 py-6">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6">Bạn cần hỗ trợ?</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-8">Đội ngũ chuyên viên của chúng tôi luôn sẵn sàng giúp đỡ bạn
+                với mọi yêu cầu vận chuyển.</p>
+            <button
+                class="bg-orange-500 hover:bg-orange-600 text-white font-medium py-3 px-8 rounded-lg transition-colors">Liên
+                hệ ngay</button>
+        </div>
+    </section>
+
+    <!-- Separator Line -->
+    <hr class="border-t border-gray-300 max-w-7xl mx-auto my-0">
+
+    <!-- Footer -->
+    <footer class="bg-[#2C2C2C] text-white pt-6 pb-6 mt-auto">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Công ty Liên Hiệp Phát Logistics</h3>
+                    <p class="text-gray-300 mb-4">Cung cấp dịch vụ logistics chất lượng cao trên toàn cầu.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://facebook.com" target="_blank"
+                            class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="https://zalo.me" target="_blank"
+                            class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fas fa-comment text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Liên hệ</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Đường Giao Hàng, TP. HCM</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:contact@logisticsabc.com"
+                                class="hover:text-white transition-colors">contact@logisticsabc.com</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:0123456789" class="hover:text-white transition-colors">0123 456 789</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Giờ làm việc</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>Thứ 2 - Thứ 6: 8:00 - 17:30</li>
+                        <li>Thứ 7: 8:00 - 12:00</li>
+                        <li>Chủ nhật: Nghỉ</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center text-gray-400 text-sm">
+                &copy; 2023 Công ty TNHH Liên Hiệp Phát Logistics. Tất cả quyền được bảo lưu.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
